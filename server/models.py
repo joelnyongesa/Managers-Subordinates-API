@@ -24,7 +24,7 @@ class Manager(db.Model, SerializerMixin):
 
     __tablename__ = "managers"
 
-    serialize_rules = ("subordinates.manager")
+    serialize_rules = ("subordinates.manager",)
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False, unique=True)
